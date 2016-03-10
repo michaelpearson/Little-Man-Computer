@@ -1,0 +1,90 @@
+<!doctype HTML>
+<html>
+    <head>
+        <script src="js/jquery-2.2.1.js"></script>
+        <script src="js/main.js"></script>
+
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <table class="component-table">
+            <tr>
+                <td rowspan="2">
+                    <div class="component code-padding">
+                        <div id="code" contenteditable="true">
+                            <div>INP</div>
+                            <div>LOOP SUB ONE</div>
+                            <div>OUT</div>
+                            <div>BRZ QUIT</div>
+                            <div>BRA LOOP</div>
+                            <div>QUIT HLT</div>
+                            <div>ONE  DAT 1</div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="component" id="memory">
+                        <table id="memory-table"></table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="component" id="input-output">
+                        <table>
+                            <tr>
+                                <td>
+                                    <label for="pc">Program Counter</label>
+                                </td>
+                                <td>
+                                    <input id="pc" type="number" value="0">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="accumulator">Accumulator</label>
+                                </td>
+                                <td>
+                                    <input id="accumulator" type="number" value="0">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="input">Input</label>
+                                </td>
+                                <td>
+                                    <input id="input" type="number" value="0">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="output">Output</label>
+                                </td>
+                                <td>
+                                    <input id="output" type="number" value="0">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="component" id="controls">
+                        <button id="compile">Compile</button>
+                        <br>
+                        <button id="compile-run">Compile &amp; Run</button>
+                        <br>
+                        <button id="step">Step</button>
+                        <br>
+                        <button id="stop">Stop</button>
+                        <br>
+                        <label for="speed">Speed</label>
+                        <br>
+                        <input type="range" min="1" max="50" value="2" id="speed">
+                    </div>
+                    <div class="component" id="errors">
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </body>
+</html>

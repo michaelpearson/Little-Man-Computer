@@ -61,7 +61,7 @@ function initControls() {
     $('#step').click(function () {
         run(fetchPC(), true);
     });
-    var errorEl = $('#errors');
+    var errorEl = $('#error-output');
     window.onerror = function (e) {
         errorEl.children().remove();
         errorEl.append('<p>' + e + '</p>');
@@ -124,6 +124,7 @@ function validateMemory(e) {
 }
 
 function compile() {
+    $('#error-output').children().remove();
     var memoryAddress = 0, a, line, symbols = {};
     function isValidLabel(label) {
         return label.match(/^[a-zA-Z][^\W]+$/i) != null;
